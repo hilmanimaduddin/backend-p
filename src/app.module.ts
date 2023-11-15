@@ -26,7 +26,7 @@ import { UserService } from './user/user.service';
     }),
     MulterModule.register({
       storage: diskStorage({
-        destination: './uploads',
+        destination: './public/uploads',
         filename: (req, file, callback) => {
           const filename = `${Date.now()}-${file.originalname}`;
           callback(null, filename);
